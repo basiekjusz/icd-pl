@@ -1,6 +1,5 @@
 import json
 import xmltodict
-import pprint
 import re
 import argparse
 import os
@@ -58,7 +57,6 @@ def parse_item(item):
         parse_node(node)
 
 
-# Handling file path not provided case.
 parser = argparse.ArgumentParser()
 
 parser.add_argument("path", help="Input file path")
