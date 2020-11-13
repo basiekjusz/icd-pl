@@ -1,6 +1,6 @@
 # icd-pl
 
-Collection of Polish ICD-9 and ICD-10 dictionaries parsed to JSON and parsers. The files has been originally obtained and parsed
+Collection of Polish ICD-9 and ICD-10 dictionaries parsed to JSON. Includes parsers. The files has been originally obtained and parsed
 from files from [CSIOZ coding systems register](https://rsk.rejestrymedyczne.csioz.gov.pl/_layouts/15/rsk/default.aspx).
 
 Current version of ICD-10 JSON file includes COVID-19 infections.
