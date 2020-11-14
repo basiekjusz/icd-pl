@@ -21,7 +21,7 @@ def parse_node(node):
 
     code_match = icd_pattern.match(node["@code"])
     if(code_match):
-        icd_list.append({"code": code_match.group(), "desc": node['name']})
+        icd_list.append({"code": code_match.group(), "name": node['name']})
     else:
         parse_item(node)
 
@@ -61,6 +61,7 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument("path", help="Input file path")
 parser.add_argument("-o", "--output", help="Output file path")
+parser.add_argument("-n", "--number", action="store_true", help="Display number of parsed items")
 
 args = parser.parse_args()
 
@@ -79,3 +80,6 @@ else:
 with open(out_path, "w") as ICD10_json:
     json.dump(icd_list, ICD10_json, ensure_ascii=False)
     ICD10_json.close()
+
+if(args.number):
+    print("Total number of parsed items:", len(icd_list))
